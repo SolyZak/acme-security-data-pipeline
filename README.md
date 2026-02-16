@@ -40,15 +40,5 @@ See `docs/diagram.txt` and `docs/architecture.md` for the diagram description.
 ## Safety Note
 Everything in this repository is fictional and synthetic. No real company names, schemas, data, or business logic are included.
 
-## What to Verify Before Publishing to GitHub
-1. No real company names, client names, or internal project references
-2. No real database schemas, table names, or column names
-3. All sample data is synthetic and non-identifiable
-4. No API keys, passwords, or connection strings
-5. No internal hostnames, URLs, or file paths
-6. No proprietary business logic or calculations that mirror real systems
-7. No sensitive data in git history, notebooks, or logs
-8. README and docs contain only generic, safe descriptions
-
 ## License
 MIT
