@@ -1,0 +1,7 @@
+visit_id,customer_id,visit_ts,channel,source,device_type,city
+V101,C001,2025-02-01 10:03:22,web,organic,mobile,Dubai
+V102,C002,2025-02-01 11:10:05,web,ads,desktop,Riyadh
+V103,C003,2025-02-02 09:42:55,app,push,mobile,Kuwait City
+V104,C004,2025-02-02 14:18:10,web,partner,desktop,Doha
+V105,C005,2025-02-03 08:35:44,app,organic,mobile,Muscat
+V106,C006,2025-02-03 16:02:11,web,ads,tablet,Manama

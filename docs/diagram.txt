@@ -1,0 +1,13 @@
+Title: Acme Security Regional Analytics Pipeline (Gulf/Middle East)
+
+1. Source: Operational CRM Database (Generic)
+2. Extract: Incremental extractor (Python) pulling data by updated_at watermark
+3. Staging: Raw landing tables (stg_customers, stg_visits, stg_events)
+4. Transform: SQL + Python jobs building dimensions and facts (SCD2 for customers)
+5. Warehouse: Star schema (dim_customer, dim_date, dim_location, dim_device, fact_event)
+6. Validation: Data quality checks (row counts, null keys, freshness)
+7. BI Layer: Dashboards and reporting (generic visualization tools)
+8. Storage: Local SQLite for demo
+9. Orchestration: Cron or lightweight scheduler for demo
+
+Notes: Scaled in production for high-volume regional data (GCC/MENA), simplified for local use.

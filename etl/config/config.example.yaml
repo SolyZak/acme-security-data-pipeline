@@ -1,0 +1,7 @@
+warehouse:
+  path: data/warehouse.db
+
+data:
+  customers_csv: data/synthetic/customers.csv
+  visits_csv: data/synthetic/visits.csv
+  events_csv: data/synthetic/events.csv

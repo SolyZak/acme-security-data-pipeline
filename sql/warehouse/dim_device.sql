@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS dim_device (
+  device_key  INTEGER PRIMARY KEY AUTOINCREMENT,
+  device_type TEXT
+);

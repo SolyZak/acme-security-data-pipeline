@@ -1,0 +1,7 @@
+customer_id,full_name,email,phone,country,city,created_at,updated_at
+C001,Aisha Karim,aisha.karim@example.com,+97150000001,UAE,Dubai,2025-01-02,2025-01-12
+C002,Omar Hassan,omar.hassan@example.com,+96650000002,Saudi Arabia,Riyadh,2025-01-03,2025-01-14
+C003,Noor Ali,noor.ali@example.com,+96550000003,Kuwait,Kuwait City,2025-01-05,2025-01-20
+C004,Huda Saleh,huda.saleh@example.com,+97450000004,Qatar,Doha,2025-01-07,2025-01-22
+C005,Faisal Nasser,faisal.nasser@example.com,+96850000005,Oman,Muscat,2025-01-08,2025-01-25
+C006,Maryam Youssef,maryam.youssef@example.com,+97350000006,Bahrain,Manama,2025-01-10,2025-01-28
