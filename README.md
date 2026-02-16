@@ -22,6 +22,9 @@ See `docs/diagram.txt` and `docs/architecture.md` for the diagram description.
 - SQLite (local demo warehouse)
 - Pandas (optional)
 
+## Data Dictionary
+See `docs/data_dictionary.md` for field definitions across staging and warehouse tables.
+
 ## Scalability Considerations
 - Incremental loading with watermarks
 - Staging layer to isolate raw data
@@ -36,6 +39,46 @@ See `docs/diagram.txt` and `docs/architecture.md` for the diagram description.
 4. Load synthetic data into staging: `python -m etl.run_pipeline --load-staging`
 5. Build warehouse tables: `python -m etl.run_pipeline --build-warehouse`
 6. Run validation checks: `python -m etl.run_pipeline --validate`
+
+## Makefile Shortcuts
+`make init`, `make load`, `make build`, `make validate`, `make run`, `make clean`
+
+## Example Queries
+Event counts by type:
+```sql
+SELECT event_type, COUNT(*) AS cnt
+FROM fact_event
+GROUP BY event_type
+ORDER BY cnt DESC;
+```
+
+Expected result:
+| event_type | cnt |
+| --- | --- |
+| view | 3 |
+| click | 2 |
+| conversion | 2 |
+
+Conversion value by country:
+```sql
+SELECT l.country, COUNT(*) AS conversions, ROUND(SUM(f.event_value), 2) AS total_value
+FROM fact_event f
+JOIN dim_location l ON f.location_key = l.location_key
+WHERE f.event_type = 'conversion'
+GROUP BY l.country
+ORDER BY total_value DESC;
+```
+
+Expected result:
+| country | conversions | total_value |
+| --- | --- | --- |
+| Bahrain | 1 | 149.00 |
+| Kuwait | 1 | 99.99 |
+
+## Roadmap
+- Add lightweight orchestration (cron or task runner)
+- Add test suite for validation logic
+- Add incremental load state tracking table
 
 ## Safety Note
 Everything in this repository is fictional and synthetic. No real company names, schemas, data, or business logic are included.
